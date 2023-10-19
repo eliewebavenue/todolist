@@ -9,13 +9,20 @@ function addTodo() {
   if (todoText) {
     const todoEl = document.createElement("li");
     todoEl.innerText = todoText;
-
+ 
     const editBtn = document.createElement("button");
     editBtn.classList = 'edit';
     editBtn.innerText = "Modifier";
     editBtn.onclick = function () {
       editTodo(todoEl);
     };
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.innerText = "Supprimer";
+    deleteBtn.onclick = function() {
+        deleteTodo(todoEl);
+    };
+    todoEl.appendChild(deleteBtn);
     todoEl.appendChild(editBtn);
     todoList.appendChild(todoEl);
     todoInput.value = "";
@@ -33,13 +40,13 @@ function editTodo(todoEl) {
   input.onblur = finishEditing;
   input.onkeydown = function(e) {
       if (e.key === "Enter") {
-          finishEditing.call(input); 
+          finishEditing.call(input);
       }
   };
   function finishEditing() {
       const newText = this.value;
       todoEl.innerHTML = newText;
-
+      // Ajouter à nouveau le bouton de modification
       const editBtn = document.createElement("button");
       editBtn.innerText = "Modifier";
       editBtn.classList = 'edit';
@@ -48,4 +55,7 @@ function editTodo(todoEl) {
       };
       todoEl.appendChild(editBtn);
   }
+}
+function deleteTodo(todoEl) {
+    todosList.removeChild(todoEl);
 }
