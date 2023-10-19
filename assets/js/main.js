@@ -2,7 +2,7 @@ function addTodo() {
   const todoInput = document.getElementById("todoInput");
   const todoList = document.getElementById("todoList");
 
-  if (todoInputue.trim() === "") {
+  if (todoInput.value.trim() === "") {
     alert("Veuillez entrer une tâche!");
     return;
   }

@@ -29,3 +29,15 @@ button {
 button:hover {
     background-color: #a11717;
 }
+
+li {
+    list-style: none;
+    padding: 5px 10px;
+    background: #c7c7c7;
+    color: white;
+    width: auto;
+}
+
+ul {
+    padding: 0;
+}
