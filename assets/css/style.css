@@ -25,11 +25,14 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: 22px;
+}
+button.edit{
+    padding: 5px 3px;
 }
 button:hover {
     background-color: #a11717;
 }
-
 li {
     list-style: none;
     padding: 5px 10px;
@@ -37,7 +40,6 @@ li {
     color: white;
     width: auto;
 }
-
 ul {
     padding: 0;
 }
