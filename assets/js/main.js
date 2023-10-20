@@ -1,8 +1,6 @@
 document.getElementById('checkAll').addEventListener('click', function() {
   const allTodos = document.querySelectorAll('#todosList li span');
-  allTodos.forEach(todo => {
-    todo.style.textdecoration = 'line-through";
-  });
+  console.log(allTodos);
 });
 
 function addTodo() {
