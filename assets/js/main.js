@@ -1,3 +1,8 @@
+document.getElementById('checkAll').addEventListener('click', function() {
+  const allTodos = document.querySelectorAll('#todosList li span');
+  console.log(allTodos);
+});
+
 function addTodo() {
   const todoInput = document.getElementById("todoInput");
   const todoList = document.getElementById("todoList");
