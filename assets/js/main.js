@@ -1,3 +1,10 @@
+document.getElementById('checkAll').addEventListener('click', function() {
+  const allTodos = document.querySelectorAll('#todosList li span');
+  allTodos.forEach(todo => {
+    todo.style.textDecoration = "line-through";
+  });
+});
+
 function addTodo() {
   const todoInput = document.getElementById("todoInput");
   const todoList = document.getElementById("todoList");
